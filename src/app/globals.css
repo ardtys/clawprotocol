@@ -1,26 +1,401 @@
 @import "tailwindcss";
 
+/* ================================
+   CLAW PROTOCOL - Design System
+   Brutalist Minimalism x Cyberpunk Archive
+   ================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Palette */
+  --void: #050505;
+  --fossil: #E0E0E0;
+  --pulse: #FF0000;
+  --ash: #1a1a1a;
+  --smoke: #2a2a2a;
+  --ghost: rgba(224, 224, 224, 0.1);
+
+  /* Semantic Colors */
+  --background: var(--void);
+  --foreground: var(--fossil);
+  --accent: var(--pulse);
+
+  /* Spacing */
+  --space-unit: 8px;
+
+  /* Noise */
+  --noise-opacity: 0.15;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-void: #050505;
+  --color-fossil: #E0E0E0;
+  --color-pulse: #FF0000;
+  --color-ash: #1a1a1a;
+  --color-smoke: #2a2a2a;
+  --color-ghost: rgba(224, 224, 224, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ================================
+   Base Styles
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--void);
+  color: var(--fossil);
+  font-family: var(--font-body), 'Fira Code', 'Courier New', monospace;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Selection */
+::selection {
+  background: var(--pulse);
+  color: var(--void);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--smoke);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pulse);
+}
+
+/* ================================
+   Typography Classes
+   ================================ */
+
+.font-heading {
+  font-family: var(--font-heading), Georgia, 'Times New Roman', serif;
+}
+
+.font-mono {
+  font-family: var(--font-body), 'Fira Code', 'Courier New', monospace;
+}
+
+/* ================================
+   Custom Cursor - The Claw
+   ================================ */
+
+.claw-cursor {
+  cursor: none;
+}
+
+.claw-cursor * {
+  cursor: none;
+}
+
+/* ================================
+   Noise Overlay
+   ================================ */
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: var(--noise-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* ================================
+   Torn Edge Effects
+   ================================ */
+
+.torn-edge {
+  clip-path: polygon(
+    0% 0%,
+    5% 2%,
+    10% 0%,
+    15% 3%,
+    20% 1%,
+    25% 4%,
+    30% 0%,
+    35% 2%,
+    40% 1%,
+    45% 3%,
+    50% 0%,
+    55% 2%,
+    60% 1%,
+    65% 4%,
+    70% 0%,
+    75% 3%,
+    80% 1%,
+    85% 2%,
+    90% 0%,
+    95% 3%,
+    100% 1%,
+    100% 97%,
+    95% 99%,
+    90% 96%,
+    85% 100%,
+    80% 98%,
+    75% 100%,
+    70% 97%,
+    65% 99%,
+    60% 100%,
+    55% 98%,
+    50% 100%,
+    45% 97%,
+    40% 99%,
+    35% 100%,
+    30% 98%,
+    25% 100%,
+    20% 97%,
+    15% 99%,
+    10% 100%,
+    5% 98%,
+    0% 100%
+  );
+}
+
+.torn-edge-heavy {
+  clip-path: polygon(
+    0% 0%,
+    3% 5%,
+    8% 2%,
+    12% 8%,
+    18% 0%,
+    22% 6%,
+    28% 3%,
+    35% 7%,
+    40% 1%,
+    48% 5%,
+    52% 0%,
+    58% 6%,
+    65% 2%,
+    70% 8%,
+    78% 1%,
+    85% 5%,
+    90% 0%,
+    95% 7%,
+    100% 2%,
+    100% 95%,
+    97% 100%,
+    92% 94%,
+    85% 100%,
+    78% 96%,
+    72% 100%,
+    65% 93%,
+    58% 99%,
+    50% 95%,
+    42% 100%,
+    35% 94%,
+    28% 100%,
+    20% 96%,
+    12% 100%,
+    5% 93%,
+    0% 98%
+  );
+}
+
+/* ================================
+   Scratch / Cut Line Effect
+   ================================ */
+
+@keyframes scratch-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.scratch-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pulse), transparent);
+  animation: scratch-reveal 0.3s ease-out forwards;
+}
+
+/* ================================
+   Glitch / Chromatic Aberration
+   ================================ */
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); filter: hue-rotate(0deg); }
+  25% { transform: translate(2px, 0); filter: hue-rotate(90deg); }
+  50% { transform: translate(-2px, 0); filter: hue-rotate(180deg); }
+  75% { transform: translate(0, 2px); filter: hue-rotate(270deg); }
+}
+
+.glitch-hover:hover {
+  animation: glitch-1 0.3s infinite;
+}
+
+.chromatic-hover {
+  position: relative;
+}
+
+.chromatic-hover::before,
+.chromatic-hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.chromatic-hover::before {
+  color: #ff0000;
+  transform: translate(-2px, 0);
+}
+
+.chromatic-hover::after {
+  color: #00ffff;
+  transform: translate(2px, 0);
+}
+
+.chromatic-hover:hover::before,
+.chromatic-hover:hover::after {
+  opacity: 0.5;
+}
+
+/* ================================
+   Glass Effect
+   ================================ */
+
+.frosted-glass {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(224, 224, 224, 0.1);
+}
+
+/* ================================
+   Animations
+   ================================ */
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--pulse); }
+  50% { box-shadow: 0 0 20px var(--pulse), 0 0 40px var(--pulse); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.scan-line {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pulse), transparent);
+  opacity: 0.3;
+  animation: scan-line 8s linear infinite;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ================================
+   Interactive States
+   ================================ */
+
+.claw-interactive {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.claw-interactive::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 40%, var(--pulse) 50%, transparent 60%);
+  background-size: 300% 300%;
+  background-position: 100% 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.claw-interactive:hover::before {
+  opacity: 0.1;
+  background-position: 0% 0%;
+}
+
+/* ================================
+   Data Transformation Effect
+   ================================ */
+
+@keyframes data-dissolve {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  50% {
+    filter: blur(4px);
+    opacity: 0.5;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.data-transform {
+  animation: data-dissolve 0.5s ease-out;
+}
+
+/* ================================
+   Era Transition States
+   ================================ */
+
+[data-era="1.0"] {
+  --noise-opacity: 0.25;
+}
+
+[data-era="2.0"] {
+  --noise-opacity: 0.15;
+}
+
+[data-era="3.0"] {
+  --noise-opacity: 0.08;
+}
+
+[data-era="4.0"] {
+  --noise-opacity: 0.02;
 }

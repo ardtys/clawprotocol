@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build)",
+      "Bash(npm run dev:*)",
+      "Bash(cat:*)",
+      "Bash(timeout:*)",
+      "Bash(dir:*)",
+      "Bash(where:*)",
+      "Bash(node generate-favicon.js:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
