@@ -221,7 +221,7 @@ export default function Navigation({ era, moltbookCount, onOpenMoltbook }: Navig
                 <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center overflow-hidden">
                   <Image
                     src="/logo.png"
-                    alt="Claw Protocol Logo"
+                    alt="Protocol Claw Logo"
                     width={48}
                     height={48}
                     className="object-contain transition-all duration-300 group-hover:scale-110"
@@ -248,7 +248,7 @@ export default function Navigation({ era, moltbookCount, onOpenMoltbook }: Navig
               </div>
               <div className="hidden sm:block">
                 <h1 className="font-heading text-lg md:text-xl font-bold text-[var(--fossil)] tracking-tight">
-                  CLAW PROTOCOL
+                  PROTOCOL CLAW
                 </h1>
                 <p className="font-mono text-[10px] md:text-xs text-[var(--fossil)]/40">
                   ARCHIVE::SYSTEM v2.4.1

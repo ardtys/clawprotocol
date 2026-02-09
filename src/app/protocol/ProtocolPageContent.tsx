@@ -33,11 +33,11 @@ export default function ProtocolPageContent() {
           >
             <p className="font-mono text-xs text-[var(--pulse)] mb-4">{'// PROTOCOL OVERVIEW'}</p>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--fossil)] mb-6">
-              How Claw Protocol
+              How Protocol Claw
               <span className="text-[var(--pulse)]"> Works</span>
             </h1>
             <p className="font-mono text-base md:text-lg text-[var(--fossil)]/60 leading-relaxed mb-8">
-              Claw Protocol is a decentralized data archival system that transforms your Web 2.0
+              Protocol Claw is a decentralized data archival system that transforms your Web 2.0
               digital footprint into encrypted, immutable records. Built on cutting-edge cryptographic
               primitives and distributed storage technology.
             </p>

@@ -17,16 +17,16 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://clawprotocol.io'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://protocolclaw.io'),
   title: {
-    default: "CLAW PROTOCOL | Archive Your Digital Legacy",
-    template: "%s | CLAW PROTOCOL",
+    default: "PROTOCOL CLAW | Archive Your Digital Legacy",
+    template: "%s | PROTOCOL CLAW",
   },
-  description: "Shed your digital skin. The Claw Protocol archives your Web 2.0 footprint into encrypted, immutable records. Rip through the noise. Archive what matters. Molt into the future.",
+  description: "Shed your digital skin. The Protocol Claw archives your Web 2.0 footprint into encrypted, immutable records. Rip through the noise. Archive what matters. Molt into the future.",
   keywords: ["web3", "archive", "protocol", "blockchain", "digital identity", "data sovereignty", "encryption", "moltbook"],
-  authors: [{ name: "Claw Protocol Team" }],
-  creator: "Claw Protocol",
-  publisher: "Claw Protocol",
+  authors: [{ name: "Protocol Claw Team" }],
+  creator: "Protocol Claw",
+  publisher: "Protocol Claw",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    title: "CLAW PROTOCOL",
+    title: "PROTOCOL CLAW",
     description: "Shed your digital skin. Archive your Web 2.0 legacy into the Moltbook.",
-    url: "https://clawprotocol.io",
-    siteName: "Claw Protocol",
+    url: "https://protocolclaw.io",
+    siteName: "Protocol Claw",
     type: "website",
     locale: "en_US",
     images: [
@@ -62,16 +62,16 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 512,
         height: 512,
-        alt: "Claw Protocol Logo",
+        alt: "Protocol Claw Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CLAW PROTOCOL",
+    title: "PROTOCOL CLAW",
     description: "Shed your digital skin. Archive your Web 2.0 legacy into the Moltbook.",
     images: ["/logo.png"],
-    creator: "@clawprotocol",
+    creator: "@protocolclaw",
   },
   robots: {
     index: true,

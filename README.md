@@ -1,8 +1,8 @@
-# CLAW PROTOCOL
+# PROTOCOL CLAW
 
 Archive your digital legacy. Shed your digital skin.
 
-The Claw Protocol archives your Web 2.0 footprint into encrypted, immutable records. Rip through the noise. Archive what matters. Molt into the future.
+The Protocol Claw archives your Web 2.0 footprint into encrypted, immutable records. Rip through the noise. Archive what matters. Molt into the future.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black)
@@ -39,7 +39,7 @@ The Claw Protocol archives your Web 2.0 footprint into encrypted, immutable reco
 
 ```bash
 git clone <repository-url>
-cd "CLAW PROTOCOL"
+cd "PROTOCOL CLAW"
 ```
 
 2. Install dependencies:
@@ -89,7 +89,7 @@ npm start
 ## Project Structure
 
 ```
-CLAW PROTOCOL/
+PROTOCOL CLAW/
 ├── public/              # Static assets
 │   ├── favicon.ico
 │   ├── logo.png
@@ -118,7 +118,7 @@ CLAW PROTOCOL/
 ## Available Pages
 
 - `/` - Homepage
-- `/about` - About Claw Protocol
+- `/about` - About Protocol Claw
 - `/protocol` - Protocol Details
 - `/features` - Key Features
 - `/roadmap` - Development Roadmap
@@ -148,7 +148,7 @@ vercel --prod
 Set these in your Vercel project settings:
 
 ```env
-NEXT_PUBLIC_BASE_URL=https://clawprotocol.io
+NEXT_PUBLIC_BASE_URL=https://protocolclaw.io
 ```
 
 ## Scripts
@@ -205,16 +205,16 @@ This project is licensed under the MIT License.
 
 ## Support
 
-For support, email support@clawprotocol.io or open an issue on GitHub.
+For support, email support@protocolclaw.io or open an issue on GitHub.
 
 ## Links
 
-- **Website:** https://clawprotocol.io
-- **Twitter:** [@clawprotocol](https://twitter.com/clawprotocol)
-- **Documentation:** [View Docs](https://clawprotocol.io/docs)
+- **Website:** https://protocolclaw.io
+- **Twitter:** [@protocolclaw](https://twitter.com/protocolclaw)
+- **Documentation:** [View Docs](https://protocolclaw.io/docs)
 
 ---
 
-Built with care by the Claw Protocol Team.
+Built with care by the Protocol Claw Team.
 
 **Status:** ✅ Production Ready

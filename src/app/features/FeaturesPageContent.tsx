@@ -99,7 +99,7 @@ From the static, text-heavy Web 1.0 era to the AI-enhanced semantic Web 4.0, eac
     title: 'Hash Verification',
     tagline: 'Cryptographic Proof of Ownership',
     description: 'Every archived item receives a unique SHA-256 hash that serves as irrefutable proof of content and timestamp.',
-    longDescription: `Hash verification is the cryptographic backbone of Claw Protocol's trust model. When you archive content, we generate a unique SHA-256 hash that mathematically represents the exact content at the exact moment of archival.
+    longDescription: `Hash verification is the cryptographic backbone of Protocol Claw's trust model. When you archive content, we generate a unique SHA-256 hash that mathematically represents the exact content at the exact moment of archival.
 
 This hash can be independently verified by anyone, proving: (1) the exact content that was archived, (2) when it was archived, and (3) who archived it. This is crucial for legal verification, dispute resolution, and establishing provenance.`,
     capabilities: [

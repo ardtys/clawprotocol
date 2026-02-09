@@ -13,9 +13,9 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     category: 'General',
-    question: 'What is Claw Protocol?',
+    question: 'What is Protocol Claw?',
     answer:
-      'Claw Protocol is a decentralized data archival system that allows you to preserve your Web 2.0 digital footprint into encrypted, immutable records. Think of it as a time capsule for your online presence—social media posts, blog entries, forum discussions, and more—all cryptographically secured and verifiable.',
+      'Protocol Claw is a decentralized data archival system that allows you to preserve your Web 2.0 digital footprint into encrypted, immutable records. Think of it as a time capsule for your online presence—social media posts, blog entries, forum discussions, and more—all cryptographically secured and verifiable.',
   },
   {
     category: 'General',
@@ -45,7 +45,7 @@ const faqs: FAQItem[] = [
     category: 'Usage',
     question: 'What platforms can I archive from?',
     answer:
-      'Currently, Claw Protocol supports archiving from Twitter/X, Facebook, Instagram, Reddit, Medium, personal blogs, and any publicly accessible webpage. We\'re continuously adding support for more platforms. Private content requires authentication.',
+      'Currently, Protocol Claw supports archiving from Twitter/X, Facebook, Instagram, Reddit, Medium, personal blogs, and any publicly accessible webpage. We\'re continuously adding support for more platforms. Private content requires authentication.',
   },
   {
     category: 'Usage',
@@ -61,7 +61,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: 'Pricing',
-    question: 'Is Claw Protocol free to use?',
+    question: 'Is Protocol Claw free to use?',
     answer:
       'Basic archiving is free for up to 100 items. Premium tiers offer unlimited archiving, advanced features like batch imports, API access, and priority processing. Storage costs are minimal due to our efficient compression and distributed architecture.',
   },
@@ -101,7 +101,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="font-mono text-sm text-[var(--fossil)]/60 max-w-2xl mx-auto">
-            Everything you need to know about Claw Protocol and the archival process.
+            Everything you need to know about Protocol Claw and the archival process.
           </p>
         </motion.div>
 

@@ -3,7 +3,7 @@ import FAQPageContent from './FAQPageContent';
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Frequently asked questions about Claw Protocol - pricing, security, usage, and technical details.',
+  description: 'Frequently asked questions about Protocol Claw - pricing, security, usage, and technical details.',
 };
 
 export default function FAQPage() {

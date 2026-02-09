@@ -18,10 +18,10 @@ const faqCategories = [
 const faqs = [
   {
     category: 'general',
-    question: 'What is Claw Protocol?',
-    answer: `Claw Protocol is a decentralized data archival system designed to preserve your Web 2.0 digital footprint into encrypted, immutable records. It acts as a permanent time capsule for your online presence—including social media posts, blog entries, forum discussions, and any web content you want to preserve.
+    question: 'What is Protocol Claw?',
+    answer: `Protocol Claw is a decentralized data archival system designed to preserve your Web 2.0 digital footprint into encrypted, immutable records. It acts as a permanent time capsule for your online presence—including social media posts, blog entries, forum discussions, and any web content you want to preserve.
 
-Unlike traditional screenshot or backup tools, Claw Protocol creates cryptographically verified archives that prove exactly when the content existed and who archived it. These archives are stored across a distributed network, ensuring they remain accessible forever.`,
+Unlike traditional screenshot or backup tools, Protocol Claw creates cryptographically verified archives that prove exactly when the content existed and who archived it. These archives are stored across a distributed network, ensuring they remain accessible forever.`,
   },
   {
     category: 'general',
@@ -32,8 +32,8 @@ As we transition from Web 2.0 to Web 3.0 and beyond, your old social media posts
   },
   {
     category: 'general',
-    question: 'Who should use Claw Protocol?',
-    answer: `Claw Protocol is valuable for anyone who wants to preserve their digital legacy:
+    question: 'Who should use Protocol Claw?',
+    answer: `Protocol Claw is valuable for anyone who wants to preserve their digital legacy:
 
 • Content Creators: Archive your posts, videos, and articles before platforms change or disappear
 • Researchers: Preserve web content for academic citations and studies
@@ -45,7 +45,7 @@ As we transition from Web 2.0 to Web 3.0 and beyond, your old social media posts
   {
     category: 'technical',
     question: 'How does the encryption work?',
-    answer: `Claw Protocol uses a multi-layer encryption system:
+    answer: `Protocol Claw uses a multi-layer encryption system:
 
 1. Client-Side Encryption: All data is encrypted on your device using AES-256 before any transmission. Your browser or app handles the encryption locally.
 
@@ -95,7 +95,7 @@ This architecture ensures your data remains available even if individual nodes g
   {
     category: 'usage',
     question: 'What platforms can I archive from?',
-    answer: `Claw Protocol currently supports archiving from 500+ platforms, including:
+    answer: `Protocol Claw currently supports archiving from 500+ platforms, including:
 
 Social Media: Twitter/X, Facebook, Instagram, LinkedIn, TikTok, Mastodon
 Forums: Reddit, Hacker News, Discord (public), Stack Overflow
@@ -121,12 +121,12 @@ However, you have several controls:
 • Export & Migration: You can export all your data at any time
 • Visibility Control: Choose which archives are public vs. private
 
-The immutability is what makes Claw Protocol valuable for legal verification and historical preservation. If content could be deleted, the verification system would be meaningless.`,
+The immutability is what makes Protocol Claw valuable for legal verification and historical preservation. If content could be deleted, the verification system would be meaningless.`,
   },
   {
     category: 'security',
     question: 'Is my data safe from hackers?',
-    answer: `Yes, Claw Protocol is designed with security-first principles:
+    answer: `Yes, Protocol Claw is designed with security-first principles:
 
 Encryption:
 • AES-256 encryption (military-grade)
@@ -148,8 +148,8 @@ Even in a worst-case scenario where our entire infrastructure was compromised, a
   },
   {
     category: 'security',
-    question: 'What happens if Claw Protocol shuts down?',
-    answer: `Your data remains safe and accessible even if Claw Protocol ceases operations:
+    question: 'What happens if Protocol Claw shuts down?',
+    answer: `Your data remains safe and accessible even if Protocol Claw ceases operations:
 
 1. Export Anytime: You can export all your archives at any time in standard formats (JSON, PDF)
 
@@ -168,7 +168,7 @@ We're also working on:
   },
   {
     category: 'pricing',
-    question: 'Is Claw Protocol free to use?',
+    question: 'Is Protocol Claw free to use?',
     answer: `We offer both free and premium tiers:
 
 Free Tier:
@@ -244,7 +244,7 @@ export default function FAQPageContent() {
               <span className="text-[var(--pulse)]"> Questions</span>
             </h1>
             <p className="font-mono text-base md:text-lg text-[var(--fossil)]/60 leading-relaxed mb-8">
-              Everything you need to know about Claw Protocol. Can't find the answer
+              Everything you need to know about Protocol Claw. Can't find the answer
               you're looking for? Reach out to our support team.
             </p>
 
@@ -376,7 +376,7 @@ export default function FAQPageContent() {
                 Join Discord <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="mailto:support@clawprotocol.io"
+                href="mailto:support@protocolclaw.io"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--smoke)]
                          text-[var(--fossil)] font-mono text-sm hover:border-[var(--pulse)] transition-colors claw-interactive"
               >

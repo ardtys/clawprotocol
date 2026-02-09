@@ -75,7 +75,7 @@ export default function PageLayout({ children, showBackButton = true }: PageLayo
                 <div className="relative w-10 h-10 md:w-12 md:h-12">
                   <Image
                     src="/logo.png"
-                    alt="Claw Protocol"
+                    alt="Protocol Claw"
                     width={48}
                     height={48}
                     className="object-contain"
@@ -84,7 +84,7 @@ export default function PageLayout({ children, showBackButton = true }: PageLayo
                 </div>
                 <div className="hidden sm:block">
                   <h1 className="font-heading text-lg md:text-xl font-bold text-[var(--fossil)]">
-                    CLAW PROTOCOL
+                    PROTOCOL CLAW
                   </h1>
                   <p className="font-mono text-[10px] text-[var(--fossil)]/40">
                     ARCHIVE::SYSTEM v2.4.1
@@ -177,8 +177,8 @@ export default function PageLayout({ children, showBackButton = true }: PageLayo
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/logo.png" alt="Claw Protocol" width={32} height={32} className="object-contain" />
-                <span className="font-heading text-lg text-[var(--fossil)]">CLAW PROTOCOL</span>
+                <Image src="/logo.png" alt="Protocol Claw" width={32} height={32} className="object-contain" />
+                <span className="font-heading text-lg text-[var(--fossil)]">PROTOCOL CLAW</span>
               </div>
               <p className="font-mono text-xs text-[var(--fossil)]/50 leading-relaxed mb-4">
                 Decentralized data archival protocol for preserving your Web 2.0 legacy.
@@ -219,7 +219,7 @@ export default function PageLayout({ children, showBackButton = true }: PageLayo
 
           <div className="pt-8 border-t border-[var(--smoke)] flex flex-col md:flex-row items-center justify-between gap-4">
             <span className="font-mono text-xs text-[var(--fossil)]/30">
-              CLAW PROTOCOL {new Date().getFullYear()} :: ALL RIGHTS ARCHIVED
+              PROTOCOL CLAW {new Date().getFullYear()} :: ALL RIGHTS ARCHIVED
             </span>
             <div className="flex items-center gap-6">
               {['Terms', 'Privacy', 'Security'].map((link) => (

@@ -28,7 +28,7 @@ const docSections = [
     title: 'Getting Started',
     description: 'Quick start guide to begin archiving your data',
     articles: [
-      { title: 'Introduction to Claw Protocol', time: '5 min read' },
+      { title: 'Introduction to Protocol Claw', time: '5 min read' },
       { title: 'Creating Your First Archive', time: '10 min read' },
       { title: 'Understanding the Moltbook', time: '8 min read' },
       { title: 'Verification Basics', time: '6 min read' },
@@ -76,9 +76,9 @@ const codeExamples = [
   {
     title: 'Archive a URL',
     language: 'javascript',
-    code: `import { ClawProtocol } from '@claw/sdk';
+    code: `import { ProtocolClaw } from '@claw/sdk';
 
-const claw = new ClawProtocol({
+const claw = new ProtocolClaw({
   apiKey: process.env.CLAW_API_KEY
 });
 
@@ -152,7 +152,7 @@ export default function DocsPageContent() {
               <span className="text-[var(--pulse)]"> Docs</span>
             </h1>
             <p className="font-mono text-base md:text-lg text-[var(--fossil)]/60 leading-relaxed mb-8">
-              Everything you need to integrate Claw Protocol into your applications.
+              Everything you need to integrate Protocol Claw into your applications.
               Complete API reference, SDK documentation, and integration guides.
             </p>
 
@@ -220,7 +220,7 @@ export default function DocsPageContent() {
               Get Started in Minutes
             </h2>
             <p className="font-mono text-sm text-[var(--fossil)]/60 max-w-2xl mx-auto">
-              Follow these steps to integrate Claw Protocol into your application.
+              Follow these steps to integrate Protocol Claw into your application.
             </p>
           </motion.div>
 

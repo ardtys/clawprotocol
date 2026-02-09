@@ -3,7 +3,7 @@ import RoadmapPageContent from './RoadmapPageContent';
 
 export const metadata: Metadata = {
   title: 'Roadmap',
-  description: 'Claw Protocol development roadmap - past achievements, current progress, and future milestones.',
+  description: 'Protocol Claw development roadmap - past achievements, current progress, and future milestones.',
 };
 
 export default function RoadmapPage() {

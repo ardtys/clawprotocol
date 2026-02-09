@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://clawprotocol.io/sitemap.xml
+Sitemap: https://protocolclaw.io/sitemap.xml
 
 # Disallow admin or private paths if any
 # Disallow: /admin/

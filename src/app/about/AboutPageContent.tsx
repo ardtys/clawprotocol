@@ -118,7 +118,7 @@ const milestones = [
   {
     year: '2023',
     title: 'The Idea',
-    description: 'Claw Protocol was conceived after witnessing countless important digital content disappear from the web.',
+    description: 'Protocol Claw was conceived after witnessing countless important digital content disappear from the web.',
   },
   {
     year: '2024 Q1',
@@ -198,7 +198,7 @@ export default function AboutPageContent() {
                 longer accessible today.
               </p>
               <p className="font-mono text-sm text-[var(--fossil)]/70 leading-relaxed mb-6">
-                Claw Protocol exists to solve this. We're building decentralized infrastructure
+                Protocol Claw exists to solve this. We're building decentralized infrastructure
                 that allows anyone to create permanent, cryptographically verified archives
                 of digital content. Whether it's a viral tweet, an important news article,
                 or your personal blog posts—we ensure it survives.
@@ -434,7 +434,7 @@ export default function AboutPageContent() {
               </p>
               <p className="font-mono text-sm text-[var(--fossil)]/60 leading-relaxed mb-8">
                 Anyone can audit our code, verify our cryptographic implementations, and
-                even run their own verification nodes. This ensures that Claw Protocol
+                even run their own verification nodes. This ensures that Protocol Claw
                 remains trustworthy even without trusting us.
               </p>
               <a
@@ -495,7 +495,7 @@ export default function AboutPageContent() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:team@clawprotocol.io"
+                href="mailto:team@protocolclaw.io"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--pulse)] text-[var(--void)]
                          font-mono text-sm claw-interactive"
               >

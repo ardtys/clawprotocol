@@ -10,7 +10,9 @@
       "Bash(dir:*)",
       "Bash(where:*)",
       "Bash(node generate-favicon.js:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(copy \"C:\\\\Users\\\\Daffa\\\\OneDrive\\\\Desktop\\\\CLAW PROTOCOL\\\\public\\\\favicon.ico\" \"C:\\\\Users\\\\Daffa\\\\OneDrive\\\\Desktop\\\\CLAW PROTOCOL\\\\src\\\\app\\\\favicon.ico\" /Y)",
+      "Bash(cp:*)"
     ]
   }
 }

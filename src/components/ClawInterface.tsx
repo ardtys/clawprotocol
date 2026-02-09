@@ -103,7 +103,7 @@ export default function ClawInterface() {
                 </h1>
 
                 <p className="font-mono text-sm md:text-base text-[var(--fossil)]/60 max-w-xl leading-relaxed mb-8">
-                  The Claw Protocol archives your Web 2.0 footprint into encrypted,
+                  The Protocol Claw archives your Web 2.0 footprint into encrypted,
                   immutable records. Rip through the noise. Archive what matters.
                   <span className="text-[var(--pulse)]"> Molt into the future.</span>
                 </p>
@@ -376,12 +376,12 @@ export default function ClawInterface() {
               <div className="flex items-center gap-3 mb-4">
                 <Image
                   src="/logo.png"
-                  alt="Claw Protocol"
+                  alt="Protocol Claw"
                   width={32}
                   height={32}
                   className="object-contain"
                 />
-                <span className="font-heading text-lg text-[var(--fossil)]">CLAW PROTOCOL</span>
+                <span className="font-heading text-lg text-[var(--fossil)]">PROTOCOL CLAW</span>
               </div>
               <p className="font-mono text-xs text-[var(--fossil)]/50 leading-relaxed mb-4">
                 Decentralized data archival protocol for preserving your Web 2.0 legacy.
@@ -440,13 +440,13 @@ export default function ClawInterface() {
             <div className="flex items-center gap-3">
               <Image
                 src="/logo.png"
-                alt="Claw Protocol"
+                alt="Protocol Claw"
                 width={20}
                 height={20}
                 className="object-contain opacity-50"
               />
               <span className="font-mono text-xs text-[var(--fossil)]/30">
-                CLAW PROTOCOL {new Date().getFullYear()} :: ALL RIGHTS ARCHIVED
+                PROTOCOL CLAW {new Date().getFullYear()} :: ALL RIGHTS ARCHIVED
               </span>
             </div>
             <div className="flex items-center gap-6">
