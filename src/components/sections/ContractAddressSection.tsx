@@ -1,24 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Copy, Check, FileCode, ExternalLink, Shield } from 'lucide-react';
-
-const CONTRACT_ADDRESS = '0xf0255E79a98c62bF7114CFF74234f558cd451bA3';
+import { FileCode, Copy, ExternalLink, Shield, Clock } from 'lucide-react';
 
 export default function ContractAddressSection() {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(CONTRACT_ADDRESS);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
-
   return (
     <section id="contract" className="py-16 md:py-24 px-4 md:px-6 border-t border-[var(--smoke)]">
       <div className="max-w-4xl mx-auto">
@@ -54,40 +39,32 @@ export default function ContractAddressSection() {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <div className="flex-1 bg-[var(--void)] border border-[var(--smoke)] px-4 py-3 overflow-hidden">
-                <code className="font-mono text-sm md:text-base text-[var(--fossil)] break-all">
-                  {CONTRACT_ADDRESS}
-                </code>
+                <div className="flex items-center gap-3">
+                  <Clock className="w-4 h-4 text-[var(--fossil)]/30" />
+                  <span className="font-mono text-sm md:text-base text-[var(--fossil)]/40 italic">
+                    Coming Soon - To Be Announced
+                  </span>
+                </div>
               </div>
 
               <div className="flex gap-2">
                 <button
-                  onClick={handleCopy}
-                  className="flex items-center justify-center gap-2 px-4 py-3 font-mono text-sm transition-all claw-interactive
-                    bg-[var(--pulse)] text-[var(--void)] hover:bg-[var(--pulse)]/90"
+                  disabled
+                  className="flex items-center justify-center gap-2 px-4 py-3 font-mono text-sm transition-all
+                    bg-[var(--smoke)]/50 text-[var(--fossil)]/30 cursor-not-allowed"
                 >
-                  {copied ? (
-                    <>
-                      <Check className="w-4 h-4" />
-                      <span className="hidden sm:inline">Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-4 h-4" />
-                      <span className="hidden sm:inline">Copy</span>
-                    </>
-                  )}
+                  <Copy className="w-4 h-4" />
+                  <span className="hidden sm:inline">Copy</span>
                 </button>
 
-                <a
-                  href={`https://etherscan.io/address/${CONTRACT_ADDRESS}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-3 border font-mono text-sm transition-all claw-interactive
-                    border-[var(--smoke)] text-[var(--fossil)] hover:border-[var(--pulse)] hover:text-[var(--pulse)]"
+                <button
+                  disabled
+                  className="flex items-center justify-center gap-2 px-4 py-3 border font-mono text-sm transition-all
+                    border-[var(--smoke)]/50 text-[var(--fossil)]/30 cursor-not-allowed"
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span className="hidden sm:inline">View</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
