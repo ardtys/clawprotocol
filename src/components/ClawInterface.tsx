@@ -409,28 +409,43 @@ export default function ClawInterface() {
             {[
               {
                 title: 'Protocol',
-                links: ['How It Works', 'Technology', 'Security', 'Roadmap'],
+                links: [
+                  { label: 'How It Works', href: '#how-it-works' },
+                  { label: 'Technology', href: '#technology' },
+                  { label: 'Contract Address', href: '#contract' },
+                  { label: 'Roadmap', href: '#roadmap' },
+                ],
               },
               {
                 title: 'Resources',
-                links: ['Documentation', 'API Reference', 'FAQ', 'Blog'],
+                links: [
+                  { label: 'Documentation', href: '/docs' },
+                  { label: 'API Reference', href: '/docs#api' },
+                  { label: 'FAQ', href: '/faq' },
+                  { label: 'Blog', href: '#' },
+                ],
               },
               {
                 title: 'Community',
-                links: ['Discord', 'Twitter', 'GitHub', 'Contributors'],
+                links: [
+                  { label: 'Discord', href: '#' },
+                  { label: 'Twitter', href: '#' },
+                  { label: 'GitHub', href: '#' },
+                  { label: 'Contributors', href: '#' },
+                ],
               },
             ].map((column) => (
               <div key={column.title}>
                 <h4 className="font-mono text-sm text-[var(--fossil)] mb-4">{column.title}</h4>
                 <ul className="space-y-2">
                   {column.links.map((link) => (
-                    <li key={link}>
+                    <li key={link.label}>
                       <a
-                        href="#"
+                        href={link.href}
                         className="font-mono text-xs text-[var(--fossil)]/50 hover:text-[var(--pulse)]
                                  transition-colors claw-interactive"
                       >
-                        {link}
+                        {link.label}
                       </a>
                     </li>
                   ))}

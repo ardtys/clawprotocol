@@ -4,14 +4,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, FileCode, ExternalLink, Shield } from 'lucide-react';
 
-const CONTRACT_ADDRESS = 'TBA';
+const CONTRACT_ADDRESS = '0xf0255E79a98c62bF7114CFF74234f558cd451bA3';
 
 export default function ContractAddressSection() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    if (CONTRACT_ADDRESS === 'TBA') return;
-
     try {
       await navigator.clipboard.writeText(CONTRACT_ADDRESS);
       setCopied(true);
@@ -57,23 +55,15 @@ export default function ContractAddressSection() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <div className="flex-1 bg-[var(--void)] border border-[var(--smoke)] px-4 py-3 overflow-hidden">
                 <code className="font-mono text-sm md:text-base text-[var(--fossil)] break-all">
-                  {CONTRACT_ADDRESS === 'TBA' ? (
-                    <span className="text-[var(--fossil)]/40 italic">Coming Soon - To Be Announced</span>
-                  ) : (
-                    CONTRACT_ADDRESS
-                  )}
+                  {CONTRACT_ADDRESS}
                 </code>
               </div>
 
               <div className="flex gap-2">
                 <button
                   onClick={handleCopy}
-                  disabled={CONTRACT_ADDRESS === 'TBA'}
-                  className={`flex items-center justify-center gap-2 px-4 py-3 font-mono text-sm transition-all claw-interactive
-                    ${CONTRACT_ADDRESS === 'TBA'
-                      ? 'bg-[var(--smoke)]/50 text-[var(--fossil)]/30 cursor-not-allowed'
-                      : 'bg-[var(--pulse)] text-[var(--void)] hover:bg-[var(--pulse)]/90'
-                    }`}
+                  className="flex items-center justify-center gap-2 px-4 py-3 font-mono text-sm transition-all claw-interactive
+                    bg-[var(--pulse)] text-[var(--void)] hover:bg-[var(--pulse)]/90"
                 >
                   {copied ? (
                     <>
@@ -89,14 +79,11 @@ export default function ContractAddressSection() {
                 </button>
 
                 <a
-                  href={CONTRACT_ADDRESS === 'TBA' ? '#' : `https://etherscan.io/address/${CONTRACT_ADDRESS}`}
+                  href={`https://etherscan.io/address/${CONTRACT_ADDRESS}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center gap-2 px-4 py-3 border font-mono text-sm transition-all claw-interactive
-                    ${CONTRACT_ADDRESS === 'TBA'
-                      ? 'border-[var(--smoke)]/50 text-[var(--fossil)]/30 cursor-not-allowed pointer-events-none'
-                      : 'border-[var(--smoke)] text-[var(--fossil)] hover:border-[var(--pulse)] hover:text-[var(--pulse)]'
-                    }`}
+                  className="flex items-center justify-center gap-2 px-4 py-3 border font-mono text-sm transition-all claw-interactive
+                    border-[var(--smoke)] text-[var(--fossil)] hover:border-[var(--pulse)] hover:text-[var(--pulse)]"
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span className="hidden sm:inline">View</span>
@@ -121,11 +108,9 @@ export default function ContractAddressSection() {
           </div>
 
           {/* Contract Info Grid */}
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="mt-6 grid grid-cols-2 gap-4">
             {[
-              { label: 'Network', value: 'TBA' },
-              { label: 'Token', value: '$CLAW' },
-              { label: 'Standard', value: 'TBA' },
+              { label: 'Token', value: '$PROTOCOLCLAW' },
               { label: 'Audited', value: 'Pending' },
             ].map((item) => (
               <div

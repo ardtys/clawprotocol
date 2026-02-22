@@ -70,6 +70,12 @@ const menuItems: MenuItem[] = [
         href: '/protocol#security',
       },
       {
+        label: 'Contract Address',
+        description: 'Official smart contract details',
+        icon: FileCode,
+        href: '/#contract',
+      },
+      {
         label: 'Data Architecture',
         description: 'Immutable storage layer design',
         icon: Database,
