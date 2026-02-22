@@ -1,9 +1,24 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FileCode, Copy, ExternalLink, Shield, Clock } from 'lucide-react';
+import { FileCode, Copy, Check, ExternalLink, Shield } from 'lucide-react';
+
+const CONTRACT_ADDRESS = 'Haf4StcQra8YzkRkoFwYqfi7dd1Lahf1NjFuC6zJBAGS';
 
 export default function ContractAddressSection() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
   return (
     <section id="contract" className="py-16 md:py-24 px-4 md:px-6 border-t border-[var(--smoke)]">
       <div className="max-w-4xl mx-auto">
@@ -39,32 +54,40 @@ export default function ContractAddressSection() {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <div className="flex-1 bg-[var(--void)] border border-[var(--smoke)] px-4 py-3 overflow-hidden">
-                <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-[var(--fossil)]/30" />
-                  <span className="font-mono text-sm md:text-base text-[var(--fossil)]/40 italic">
-                    Coming Soon - To Be Announced
-                  </span>
-                </div>
+                <code className="font-mono text-sm md:text-base text-[var(--fossil)] break-all">
+                  {CONTRACT_ADDRESS}
+                </code>
               </div>
 
               <div className="flex gap-2">
                 <button
-                  disabled
-                  className="flex items-center justify-center gap-2 px-4 py-3 font-mono text-sm transition-all
-                    bg-[var(--smoke)]/50 text-[var(--fossil)]/30 cursor-not-allowed"
+                  onClick={handleCopy}
+                  className="flex items-center justify-center gap-2 px-4 py-3 font-mono text-sm transition-all claw-interactive
+                    bg-[var(--pulse)] text-[var(--void)] hover:bg-[var(--pulse)]/90"
                 >
-                  <Copy className="w-4 h-4" />
-                  <span className="hidden sm:inline">Copy</span>
+                  {copied ? (
+                    <>
+                      <Check className="w-4 h-4" />
+                      <span className="hidden sm:inline">Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-4 h-4" />
+                      <span className="hidden sm:inline">Copy</span>
+                    </>
+                  )}
                 </button>
 
-                <button
-                  disabled
-                  className="flex items-center justify-center gap-2 px-4 py-3 border font-mono text-sm transition-all
-                    border-[var(--smoke)]/50 text-[var(--fossil)]/30 cursor-not-allowed"
+                <a
+                  href={`https://solscan.io/token/${CONTRACT_ADDRESS}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-4 py-3 border font-mono text-sm transition-all claw-interactive
+                    border-[var(--smoke)] text-[var(--fossil)] hover:border-[var(--pulse)] hover:text-[var(--pulse)]"
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span className="hidden sm:inline">View</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -87,7 +110,7 @@ export default function ContractAddressSection() {
           {/* Contract Info Grid */}
           <div className="mt-6 grid grid-cols-2 gap-4">
             {[
-              { label: 'Token', value: '$PROTOCOLCLAW' },
+              { label: 'Token', value: '$PROCLAW' },
               { label: 'Audited', value: 'Pending' },
             ].map((item) => (
               <div
