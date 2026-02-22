@@ -16,6 +16,7 @@ import {
   TechnologySection,
   FAQSection,
   RoadmapSection,
+  ContractAddressSection,
 } from './sections';
 
 interface MoltbookItem {
@@ -304,6 +305,9 @@ export default function ClawInterface() {
 
         {/* ========== TECHNOLOGY SECTION ========== */}
         <TechnologySection />
+
+        {/* ========== CONTRACT ADDRESS SECTION ========== */}
+        <ContractAddressSection />
 
         {/* ========== FAQ SECTION ========== */}
         <FAQSection />
